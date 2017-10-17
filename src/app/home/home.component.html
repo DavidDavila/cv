@@ -1,0 +1,17 @@
+<section id="home" [ngClass]="{'out': out}">
+  <article data-0="margin-top: -68.2vh;    transform: scale(2.8) translateX(0.1%)" data-600="margin-top: -20.4vh;transform: scale(1.41) translateX(1.2%);" data-1200="    transform: scale(0.8) translateX(31%);
+    margin-top: 11vh;">
+    <app-mac></app-mac>
+    <img src="/assets/img/mac.png">
+  </article>
+  <article class="msg">
+    <div>
+      <h2 data-700="opacity:0; transform: translateY(0.5%);" data-1200="opacity:1; transform:translateY(-20%)">{{'HOME.TITLE' | translate}}
+      </h2>
+      <h3 data-700="opacity:0; transform: translateY(0.5%);" data-1200="opacity:1; transform:translateY(-20%)">{{'HOME.SUBTITLE' | translate}}</h3>
+      <button (click)="goTo($event)" class="button dark blue" data-700="opacity:0; transform: translateY(0.5%);" data-1200="opacity:1; transform:translateY(-20%)">
+        <b>{{'ENTER'  | translate}}</b>
+      </button>
+    </div>
+  </article>
+</section> 

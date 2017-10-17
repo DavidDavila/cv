@@ -1,0 +1,454 @@
+//colors
+$color_golden_grass_approx: #d6a41d;
+$color_suva_gray_approx: #888;
+$color_astral_approx: #348597;
+$white_50: rgba(255,255,255,0.5);
+$white: #fff;
+$black:  black;
+$color_golden_grass_50_approx: rgba(179, 138, 25, 0.5);
+
+//fonts
+$font_0: Lato;
+$font_1: sans-serif;
+$font_2: Arbutus Slab;
+$font_3: serif;
+
+//urls
+$url_0: url(assets/img/loading.png);
+
+//@extend-elements
+//original selectors
+//html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+%extend_1 {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+//original selectors
+//.button >b:after, .button >b:before
+%extend_2 {
+	display: block;
+    width: 20px;
+    content: '';
+    position: absolute;
+    height: calc(100% - 2px);
+    top: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+
+html {
+	@extend %extend_1;
+}
+body {
+	@extend %extend_1;
+	line-height: 1;
+}
+div {
+	@extend %extend_1;
+}
+span {
+	@extend %extend_1;
+}
+applet {
+	@extend %extend_1;
+}
+object {
+	@extend %extend_1;
+}
+iframe {
+	@extend %extend_1;
+}
+h1 {
+	@extend %extend_1;
+}
+h2 {
+	@extend %extend_1;
+	font-size: 6.7vw;
+	font-weight: 900;
+}
+h3 {
+	@extend %extend_1;
+	font-size: 2.8vw;
+	margin-bottom: 70px;
+	color: $color_golden_grass_approx;
+}
+h4 {
+	@extend %extend_1;
+	font-family: $font_2, $font_3;
+	color: $color_suva_gray_approx;
+	text-align: center;
+	font-size: 1.7vw;
+	line-height: 2.6vw;
+}
+h5 {
+	@extend %extend_1;
+}
+h6 {
+	@extend %extend_1;
+}
+p {
+	@extend %extend_1;
+	font-size: 1.2vw;
+	line-height: 1.9vw;
+}
+.desc{
+	p{
+		font-size: 1vw;
+		line-height: 1.6vw;
+		margin-bottom: 1vw;
+		b{
+			color: $color_golden_grass_approx
+		}
+		&:nth-child(2) {
+			padding: 0 1.2vw;
+		}
+	}
+}
+blockquote {
+	@extend %extend_1;
+	quotes: none;
+	&:before {
+		content: '';
+		content: none;
+	}
+	&:after {
+		content: '';
+		content: none;
+	}
+}
+pre {
+	@extend %extend_1;
+}
+a {
+	@extend %extend_1;
+	&.md-primary.md-hue-1 {
+		font-size: 1vw;
+		line-height: 2.5vw;
+		color: $color_astral_approx;
+		margin-left: 30px;
+	}
+}
+abbr {
+	@extend %extend_1;
+}
+acronym {
+	@extend %extend_1;
+}
+address {
+	@extend %extend_1;
+}
+big {
+	@extend %extend_1;
+}
+cite {
+	@extend %extend_1;
+}
+code {
+	@extend %extend_1;
+}
+del {
+	@extend %extend_1;
+}
+dfn {
+	@extend %extend_1;
+}
+em {
+	@extend %extend_1;
+}
+img {
+	@extend %extend_1;
+}
+ins {
+	@extend %extend_1;
+}
+kbd {
+	@extend %extend_1;
+}
+q {
+	@extend %extend_1;
+	quotes: none;
+	&:before {
+		content: '';
+		content: none;
+	}
+	&:after {
+		content: '';
+		content: none;
+	}
+}
+s {
+	@extend %extend_1;
+}
+samp {
+	@extend %extend_1;
+}
+small {
+	@extend %extend_1;
+}
+strike {
+	@extend %extend_1;
+}
+strong {
+	@extend %extend_1;
+}
+sub {
+	@extend %extend_1;
+}
+sup {
+	@extend %extend_1;
+}
+tt {
+	@extend %extend_1;
+}
+var {
+	@extend %extend_1;
+}
+b {
+	@extend %extend_1;
+	font-weight: bold;
+}
+u {
+	@extend %extend_1;
+}
+i {
+	@extend %extend_1;
+}
+center {
+	@extend %extend_1;
+}
+dl {
+	@extend %extend_1;
+}
+dt {
+	@extend %extend_1;
+}
+dd {
+	@extend %extend_1;
+}
+ol {
+	@extend %extend_1;
+	list-style: none;
+}
+ul {
+	@extend %extend_1;
+	list-style: none;
+}
+li {
+	@extend %extend_1;
+}
+fieldset {
+	@extend %extend_1;
+}
+form {
+	@extend %extend_1;
+}
+label {
+	@extend %extend_1;
+}
+legend {
+	@extend %extend_1;
+}
+table {
+	@extend %extend_1;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption {
+	@extend %extend_1;
+}
+tbody {
+	@extend %extend_1;
+}
+tfoot {
+	@extend %extend_1;
+}
+thead {
+	@extend %extend_1;
+}
+tr {
+	@extend %extend_1;
+}
+th {
+	@extend %extend_1;
+}
+td {
+	@extend %extend_1;
+}
+article {
+	@extend %extend_1;
+	display: block;
+}
+aside {
+	@extend %extend_1;
+	display: block;
+}
+canvas {
+	@extend %extend_1;
+}
+details {
+	@extend %extend_1;
+	display: block;
+}
+embed {
+	@extend %extend_1;
+}
+figure {
+	@extend %extend_1;
+	display: block;
+}
+figcaption {
+	@extend %extend_1;
+	display: block;
+}
+footer {
+	@extend %extend_1;
+	display: block;
+}
+header {
+	@extend %extend_1;
+	display: block;
+}
+hgroup {
+	@extend %extend_1;
+	display: block;
+}
+menu {
+	@extend %extend_1;
+	display: block;
+}
+nav {
+	@extend %extend_1;
+	display: block;
+}
+output {
+	@extend %extend_1;
+}
+ruby {
+	@extend %extend_1;
+}
+section {
+	@extend %extend_1;
+	display: block;
+}
+summary {
+	@extend %extend_1;
+}
+time {
+	@extend %extend_1;
+}
+mark {
+	@extend %extend_1;
+}
+audio {
+	@extend %extend_1;
+}
+video {
+	@extend %extend_1;
+}
+* {
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	text-decoration: none;
+	font-family: $font_0, $font_1;
+}
+.loading { 
+	background-image: $url_0;
+	display: block;
+	width: 100%;
+	height: 101vh;
+	background-size: cover;
+	background-position: top center;
+}
+#map_canvas {
+	width: 100vw;
+	height: 30vw;
+	margin-bottom: 100px;
+}
+.button {
+	line-height: 1.95vw;
+	border: 0;
+	background: rgba(0, 0, 0, 0);
+	border-bottom: 2px solid $white_50;
+	color: $white;
+	font-size: 0.8vw;
+	font-weight: 500;
+	position: relative;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 0 6px $black;
+	> b {
+		padding-left: 5px;
+		&:after {
+			@extend %extend_2;
+			left: -22px;
+			border-left: 2px solid $white_50;
+		}
+		&:before {
+			@extend %extend_2;
+			right: -22px;
+			border-right: 2px solid $white_50;
+		}
+	}
+	&:after {
+		//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		text-shadow: none;
+		letter-spacing: 0;
+		content: attr(data-parent);
+		position: absolute;
+		top: -15.1px;
+		font-size: 1vw;
+		left: 11px;
+		text-transform: initial;
+		font-family: Arbutus Slab;
+		font-style: italic;
+		color: rgba(255, 255, 255, 0.5);
+	}
+	&.dark{
+		text-shadow: none;
+		border-bottom: 2px solid $color_golden_grass_approx;
+		color: $color_golden_grass_approx;
+		&:after {
+			color: $color_golden_grass_50_approx;
+		}
+		> b {
+			&:after {
+				border-bottom: 2px solid $color_golden_grass_approx;
+				border-top: 2px solid $color_golden_grass_approx;
+				border-left: 2px solid $color_golden_grass_approx;
+			}
+			&:before {
+				border-bottom: 2px solid $color_golden_grass_approx;
+				border-top: 2px solid $color_golden_grass_approx;
+				border-right: 2px solid $color_golden_grass_approx;
+			}
+		}
+	}
+	&.blue{
+		border-bottom: 2px solid $color_astral_approx;
+		color: $color_astral_approx;
+		&:after {
+			color: $color_astral_approx;
+		}
+		> b {
+			&:after {
+				border-bottom: 2px solid $color_astral_approx;
+				border-top: 2px solid $color_astral_approx;
+				border-left: 2px solid $color_astral_approx;
+			}
+			&:before {
+				border-bottom: 2px solid $color_astral_approx;
+				border-top: 2px solid $color_astral_approx;
+				border-right: 2px solid $color_astral_approx;
+			}
+		}
+	}
+}
