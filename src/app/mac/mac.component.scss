@@ -132,7 +132,12 @@ $url_0: url(/assets/img/bg.jpg);
     						>span{
     							display: block;
 							    width: 19vh;
-							    background: $color_golden_grass_approx;
+							    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#997315+0,d6a41d+64 */
+							    background: #997315; /* Old browsers */
+							    background: -moz-linear-gradient(-45deg, #997315 0%, #d6a41d 64%); /* FF3.6-15 */
+							    background: -webkit-linear-gradient(-45deg, #997315 0%,#d6a41d 64%); /* Chrome10-25,Safari5.1-6 */
+							    background: linear-gradient(135deg, #997315 0%,#d6a41d 64%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+							    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#997315', endColorstr='#d6a41d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 							    height: 19vh;
 							    margin: 3.9vh auto 0;
 							    transform: rotate(45deg);

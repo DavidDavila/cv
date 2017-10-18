@@ -1,0 +1,19 @@
+{
+	"HOME": {
+		"HI": "Hi",
+		"I_AM": "I am",		
+		"TITLE": "Welcome,",
+		"SUBTITLE": "What are you interested in?",
+		"DESCRIPTION": "<p>I consider myself a developer with a soul designer, <b>creative and detailed</b> in the quality of my code and in the final product. I have worked as a full-stack since 2008, but always dedicating a special treat to my preferred language: <b>Javascritpt</b> and its design patterns. </ p> <p> I am constantly moving, always investing my time in learning and discovering new technologies and their applications. </ p> <p>I'm currently making a robot with a Raspberry.</ p> "
+	},"EDUCATION": {
+		"NAME": "Education"
+	},
+	"WORKFLOW": {
+		"NAME": "Workflow",
+		"SUBTITLE": "Remembering the roots",
+		"DESCRIPTION": "<p>Afortunado por haber trabajado en empresas punteras, en proyectos modernos y junto a grandes profesionales que me han visto crecer profesionalmente.</p><p>Aquí mi homenaje a ellos:</p>",
+		"SHOW_ALL": "Show all"
+	},
+	"ABOUT": "About",
+	"ENTER":"Enter"
+}
