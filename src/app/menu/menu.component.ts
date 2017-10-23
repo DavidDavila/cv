@@ -21,13 +21,9 @@ export class MenuComponent implements OnInit {
 		this.classMenu += ' ' + classMenu;
 		this.currentView = classMenu;
 		classMenu === 'right' ?
-
 			history.pushState({},'/studies','/workflow')
-			:
-			classMenu === 'left' ?
-				history.pushState({},'/studies','/studies')
-				:
-				history.pushState({},'/studies','/myself')
+			:			
+			history.pushState({},'/studies','/studies');				
 	}
 	userUpdated(){
 		this.classMenu= 'open';
