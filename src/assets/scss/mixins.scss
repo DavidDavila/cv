@@ -1,0 +1,64 @@
+@use "sass:map";
+
+$transiciones: (
+  appear: (
+    pre: (
+      scale: 0%,
+      transform: translateX(5vw),
+      opacity: 0,
+    ),
+    in: (
+      scale: 100%,
+      transform: translateX(0),
+      opacity: 1,
+    ),
+    out: (
+      opacity: 0,
+      scale: 200%,
+      transform: translateX(-10vw) translateY(-10vw),
+    ),
+  ),
+);
+@mixin map-merge($map) {
+  @each $key, $value in $map {
+    #{$key}: $value;
+  }
+}
+@mixin animacion-escalado($name, $pre, $in, $keep, $out) {
+  $finalName: $name + (random(1100) + 4);
+  $percent: "%";
+  $sufix-pre: "pre";
+  $sufix-in: "in";
+  $sufix-keep: "keep";
+  $sufix-out: "out";
+  $mixin-pre: str-join($name, $sufix-pre);
+
+  @keyframes #{$finalName} {
+    #{$pre}#{$percent} {
+      $transicion: map.get($transiciones, $name, $sufix-pre);
+
+      @include map-merge($transicion); // Si es necesario
+    }
+    #{$in}#{$percent} {
+      $transicion: map.get($transiciones, $name, $sufix-in);
+
+      @include map-merge($transicion); // Si es necesario
+    }
+    #{$keep}#{$percent} {
+      $transicion: map.get($transiciones, $name, $sufix-in);
+
+      @include map-merge($transicion); // Si es necesario
+    }
+    #{$out}#{$percent} {
+      $transicion: map.get($transiciones, $name, $sufix-out);
+
+      @include map-merge($transicion); // Si es necesario
+    }
+  }
+  opacity: 0;
+  view-timeline-axis: block;
+  animation-timeline: --main-scroll;
+  animation-name: #{$finalName};
+  animation-range: entry 100% cover 100%;
+  animation-fill-mode: both;
+}

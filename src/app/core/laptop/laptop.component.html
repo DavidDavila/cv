@@ -1,0 +1,33 @@
+<section id="laptop" #laptop>
+  <article>
+    <input id="laptop-toggle" type="checkbox" [checked]="toggleLaptop" />
+    <div id="laptop__element">
+      <div class="cube">
+
+        <label class="cube__face cube__face--back" for="laptop-toggle" tabindex="0">
+          <div>
+            <div id="screen">
+            </div>
+          </div>
+          <ng-container *ngFor="let item of shapes">
+            <div></div>
+          </ng-container>
+        </label>
+        <div class="cube__face cube__face--bottom">
+          <ng-container *ngFor="let item of shapes">
+            <div></div>
+          </ng-container>
+          <div>
+            <div id="keyboard">
+              <div *ngFor="let key of keyboardKeys " class="key">
+                <div></div>
+              </div>
+            </div>
+            <label id="trackpad" for="like" tabindex="0"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+</section>

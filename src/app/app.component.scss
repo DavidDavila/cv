@@ -1,0 +1,14 @@
+main {
+  view-timeline-name: --main-scroll;
+  overflow: hidden;
+  background-color: var(--bg-100);
+  margin: 0 var(--padding-page);
+  > * {
+    display: block;
+  }
+  laptop-component {
+    display: block;
+    position: fixed;
+    inset: 0;
+  }
+}

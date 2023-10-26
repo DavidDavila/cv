@@ -1,0 +1,39 @@
+$top-bar-height: 1rem;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: calc(100%);
+  padding: 0 var(--padding-page);
+  z-index: 10;
+  left: 0;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--padding-page);
+    background-color: var(--bg-200);
+  }
+  > h1 {
+    margin-top: var(--padding-page);
+    padding: 0 0 0 var(--padding-page);
+  }
+  > ul {
+    margin-top: $top-bar-height;
+    background-color: var(--bg-200);
+    padding: 1rem 0 1rem var(--padding-page);
+    border-radius: 0 0 0 var(--border-radius);
+    display: inline-flex;
+    gap: 1.5rem;
+    position: relative;
+
+    li {
+      a {
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
