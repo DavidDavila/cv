@@ -32,8 +32,8 @@ export class LaptopService {
     if (window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', (event: any) => {
         if (this.canMove) {
-          this.targetAxes.x = this.initial.x - event.gamma;
-          this.targetAxes.y = this.initial.y + event.beta;
+          this.targetAxes.x = this.initial.x - event.gamma / 1.5;
+          this.targetAxes.y = this.initial.y + event.beta / 1.5;
 
           if (!this.isAnimating) {
             this.animateRotation();
