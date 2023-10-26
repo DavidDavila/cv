@@ -23,9 +23,12 @@
   justify-content: center;
   height: 110vh;
   width: 100vw;
-  max-width: 59vw;
+  max-width: 49vw;
 
   margin: 0 auto;
+  @media (width <= 768px) {
+    max-width: 80vw;
+  }
   > * {
     position: relative;
     z-index: 1;
@@ -42,7 +45,7 @@
     animation-range: entry 100% cover 100%;
     animation-fill-mode: both;
     b {
-      color: var(--primary-100);
+      color: var(--accent-100);
       font-weight: 700;
     }
   }

@@ -3,6 +3,9 @@ main {
   overflow: hidden;
   background-color: var(--bg-100);
   margin: 0 var(--padding-page);
+  @media (width <= 768px) {
+    margin: 0;
+  }
   > * {
     display: block;
   }

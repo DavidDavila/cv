@@ -80,35 +80,45 @@
   align-items: center;
   position: relative;
   z-index: 1;
-
-  > article {
-    width: 50%;
-    font-size: 1.8vw;
-    line-height: 1.4;
-    h3 {
-      @include animacion-escalado("appear", 3, 10, 15, 18);
-      margin-bottom: 18vh;
+  @media (width <= 768px) {
+    justify-content: center;
+  }
+  h3 {
+    @include animacion-escalado("appear", 3, 10, 15, 18);
+    margin-bottom: 18vh;
+    @media (width <= 768px) {
+      text-align: center;
     }
-    p {
-      margin-bottom: 3vh;
-      opacity: 0;
+  }
+  p {
+    margin-bottom: 3vh;
+    opacity: 0;
 
-      max-width: 40vw;
-      &:nth-child(2) {
-        @include animacion-escalado("appear", 8, 11, 20, 22);
-      }
-      &:nth-child(3) {
-        @include animacion-escalado("appear", 10, 14, 23, 25);
-      }
-      &:nth-child(4) {
-        @include animacion-escalado("appear", 12, 15, 24, 26);
-      }
-      &:nth-child(5) {
-        @include animacion-escalado("appear", 14, 17, 26, 28);
-      }
-      &:nth-child(6) {
-        @include animacion-escalado("appear", 16, 19, 28, 30);
-      }
+    max-width: 40vw;
+    animation: none !important;
+    text-align: initial;
+
+    margin: 0 auto 3vh;
+    @media (width <= 768px) {
+      animation: none !important;
+      max-width: 80vw;
+      opacity: 1;
     }
+  }
+
+  &:nth-child(2) {
+    @include animacion-escalado("appear", 8, 11, 20, 22);
+  }
+  &:nth-child(3) {
+    @include animacion-escalado("appear", 10, 14, 23, 25);
+  }
+  &:nth-child(4) {
+    @include animacion-escalado("appear", 12, 15, 24, 26);
+  }
+  &:nth-child(5) {
+    @include animacion-escalado("appear", 14, 17, 26, 28);
+  }
+  &:nth-child(6) {
+    @include animacion-escalado("appear", 16, 19, 28, 30);
   }
 }

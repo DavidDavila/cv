@@ -1,5 +1,4 @@
 $bottom-bar-height: 1rem;
-$font-size: 0.7rem;
 footer {
   display: flex;
   justify-content: space-between;
@@ -22,13 +21,16 @@ footer {
 
   > ul {
     margin-bottom: $bottom-bar-height;
+    margin-left: calc(var(--padding-page) * -1);
     background-color: var(--bg-200);
-    padding: 1rem var(--padding-page) 1rem 0;
+    padding: 1rem 1rem var(--padding-page);
     border-radius: 0 var(--border-radius) 0 0;
     display: inline-flex;
     gap: 1.5rem;
     position: relative;
-
+    @media (width <= 768px) {
+      padding: 1rem 1.5rem var(--padding-page);
+    }
     li {
       a {
         display: inline-flex;
@@ -36,9 +38,18 @@ footer {
         justify-content: center;
         align-items: center;
         letter-spacing: 2px;
+
         ::ng-deep svg {
           fill: var(--text-100);
-          height: $font-size;
+          height: 0.7rem;
+          @media (width <= 768px) {
+            height: 5vw;
+          }
+        }
+        > span.text {
+          @media (width <= 768px) {
+            display: none;
+          }
         }
       }
     }
