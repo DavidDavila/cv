@@ -55,17 +55,17 @@ $border-radius: 5px;
   0% {
     filter: drop-shadow(4vmin 4vmin 80px var(--bg-200))
       drop-shadow(8vmin 8vmin 80px var(--bg-300))
-      drop-shadow(12vmin 12vmin 40px var(--accent-100));
+      drop-shadow(12vmin 12vmin 40px var(--primary-100));
   }
   50% {
     filter: drop-shadow(0 5vmin 80px var(--bg-200))
       drop-shadow(5vmin 5vmin 80px var(--bg-300))
-      drop-shadow(-12vmin 5vmin 40px var(--accent-100));
+      drop-shadow(-12vmin 5vmin 40px var(--primary-100));
   }
   100% {
     filter: drop-shadow(-2vmin -2vmin 80px var(--bg-200))
       drop-shadow(-5vmin -5vmin 80px var(--bg-300))
-      drop-shadow(-12vmin -12vmin 40px var(--accent-100));
+      drop-shadow(-12vmin -12vmin 40px var(--primary-100));
   }
 }
 #laptop {
@@ -154,7 +154,7 @@ $border-radius: 5px;
         }
         &:last-child {
           background-color: $gray;
-          background-image: url("/assets/img/stickers.png");
+          background-image: url("/cv/assets/img/stickers.png");
           background-repeat: no-repeat;
           background-size: contain;
           background-position: center;
@@ -179,7 +179,7 @@ $border-radius: 5px;
             animation-name: appearScreen;
             animation-range: entry 100% cover 100%;
             animation-fill-mode: both;
-            background-image: url("/assets/img/linkedin.png");
+            background-image: url("/cv/assets/img/linkedin.png");
             background-size: cover;
             background-position: center;
             content: "";

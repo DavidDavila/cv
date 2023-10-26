@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "publish": "ng build && angular-cli-ghpages --branch=master"
+    "publish": "git add . & git commit -m 'wip' & git push & ng build & angular-cli-ghpages --branch=master"
   },
   "private": true,
   "dependencies": {
