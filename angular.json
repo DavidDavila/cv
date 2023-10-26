@@ -27,7 +27,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "/googleb1f362f2c3f484c2.html"
+              "src/googleb1f362f2c3f484c2.html"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/assets/scss"]
