@@ -95,30 +95,29 @@
     opacity: 0;
 
     max-width: 40vw;
-    animation: none !important;
-    text-align: initial;
 
-    margin: 0 auto 3vh;
     @media (width <= 768px) {
       animation: none !important;
       max-width: 80vw;
+      margin: 0 auto 3vh;
       opacity: 1;
+      text-align: initial;
     }
-  }
 
-  &:nth-child(2) {
-    @include animacion-escalado("appear", 8, 11, 20, 22);
-  }
-  &:nth-child(3) {
-    @include animacion-escalado("appear", 10, 14, 23, 25);
-  }
-  &:nth-child(4) {
-    @include animacion-escalado("appear", 12, 15, 24, 26);
-  }
-  &:nth-child(5) {
-    @include animacion-escalado("appear", 14, 17, 26, 28);
-  }
-  &:nth-child(6) {
-    @include animacion-escalado("appear", 16, 19, 28, 30);
+    &:nth-child(2) {
+      @include animacion-escalado("appear", 8, 11, 20, 22);
+    }
+    &:nth-child(3) {
+      @include animacion-escalado("appear", 10, 14, 23, 25);
+    }
+    &:nth-child(4) {
+      @include animacion-escalado("appear", 12, 15, 24, 26);
+    }
+    &:nth-child(5) {
+      @include animacion-escalado("appear", 14, 17, 26, 28);
+    }
+    &:nth-child(6) {
+      @include animacion-escalado("appear", 16, 19, 28, 30);
+    }
   }
 }
