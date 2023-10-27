@@ -5,7 +5,6 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class LaptopService {
-  private initial = { x: -30, y: 40 };
   private _axes = { x: 0, y: 0 };
   private translateBackground = 0;
   private container!: ElementRef;
@@ -28,12 +27,21 @@ export class LaptopService {
   start(container: ElementRef) {
     this.container = container;
     this.applyRotation();
-    this.animateRotationConstant();
+    // this.animateRotationConstant();
     if (window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', (event: any) => {
         if (this.canMove) {
-          this.targetAxes.x = this.initial.x - event.gamma / 1.5;
-          this.targetAxes.y = this.initial.y + event.beta / 1.5;
+          const element = window.getComputedStyle(this.container.nativeElement);
+          const initial = {
+            x: Number(
+              element.getPropertyValue('--rotate-initial-x').replace('deg', '')
+            ),
+            y: Number(
+              element.getPropertyValue('--rotate-initial-y').replace('deg', '')
+            ),
+          };
+          this.targetAxes.x = initial.x - event.gamma / 1.5;
+          this.targetAxes.y = initial.y + event.beta / 1.5;
 
           if (!this.isAnimating) {
             this.animateRotation();
@@ -43,13 +51,23 @@ export class LaptopService {
     }
     document.addEventListener('mousemove', (e) => {
       if (this.canMove) {
+        const element = window.getComputedStyle(this.container.nativeElement);
+        const initial = {
+          x: Number(
+            element.getPropertyValue('--rotate-initial-x').replace('deg', '')
+          ),
+          y: Number(
+            element.getPropertyValue('--rotate-initial-y').replace('deg', '')
+          ),
+        };
+        console.log(initial);
         const centerX = 0;
         const centerY = 0;
         const deltaX = e.clientX - centerX;
         const deltaY = e.clientY - centerY;
 
-        this.targetAxes.y = deltaY * this.smooth + this.initial.y;
-        this.targetAxes.x = deltaX * this.smooth + this.initial.x;
+        this.targetAxes.y = deltaY * this.smooth + initial.y;
+        this.targetAxes.x = deltaX * this.smooth + initial.x;
 
         if (!this.isAnimating) {
           this.animateRotation();
@@ -61,12 +79,10 @@ export class LaptopService {
     const animate = () => {
       if (this.canMove) {
         this._axes.y += 0.05;
-
         this.applyRotation();
         requestAnimationFrame(animate);
       }
     };
-
     if (!this.isAnimating) {
       animate();
     }
@@ -82,6 +98,7 @@ export class LaptopService {
         this.targetAxes.x,
         progress
       );
+
       if (progress < 1) {
         this._axes.x = this.interpolate(
           this._axes.x,
@@ -93,7 +110,9 @@ export class LaptopService {
           this.targetAxes.y,
           progress
         );
+
         this.applyRotation();
+
         requestAnimationFrame(updateAxes);
       } else {
         this._axes.x = this.targetAxes.x;
