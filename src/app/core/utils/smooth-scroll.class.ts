@@ -5,7 +5,7 @@ export class SmoothScroll {
   constructor(
     public target: HTMLElement,
     public speed: number = 240,
-    public smooth: number = 12
+    public smooth: number = 6
   ) {
     this.moving = false;
     this.pos = this.target.scrollTop;
