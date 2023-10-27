@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { LaptopService } from './laptop.service';
-
 @Component({
   selector: 'laptop-component',
   templateUrl: './laptop.component.html',
@@ -18,6 +17,13 @@ export class LaptopComponent implements AfterViewInit {
   constructor(private laptopService: LaptopService) {
     this.laptopService.toggleLaptop$.subscribe((toggle) => {
       this.toggleLaptop = toggle;
+    });
+    document.addEventListener('animationchange', (event: any) => {
+      if (event['animation-change']) {
+        console.log(88888888888888888888888);
+        // Realizar alguna acción aquí, por ejemplo, notificar al servicio sobre el cambio
+        // this.notifyServiceAboutChange();
+      }
     });
   }
 

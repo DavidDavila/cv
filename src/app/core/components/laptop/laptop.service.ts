@@ -27,7 +27,7 @@ export class LaptopService {
   start(container: ElementRef) {
     this.container = container;
     this.applyRotation();
-    // this.animateRotationConstant();
+    this.animateRotationConstant();
     if (window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', (event: any) => {
         if (this.canMove) {
@@ -60,7 +60,6 @@ export class LaptopService {
             element.getPropertyValue('--rotate-initial-y').replace('deg', '')
           ),
         };
-        console.log(initial);
         const centerX = 0;
         const centerY = 0;
         const deltaX = e.clientX - centerX;

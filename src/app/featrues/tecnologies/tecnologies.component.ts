@@ -6,7 +6,7 @@ import {
   Self,
   ViewChild,
 } from '@angular/core';
-import { LaptopService } from 'src/app/core/laptop/laptop.service';
+import { LaptopService } from 'src/app/core/components/laptop/laptop.service';
 
 @Component({
   selector: 'app-technologies',

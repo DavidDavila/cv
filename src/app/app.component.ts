@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { LaptopService } from './core/laptop/laptop.service';
+import { LaptopService } from './core/components/laptop/laptop.service';
 import { SmoothScroll } from './core/utils/smooth-scroll.class';
 
 @Component({

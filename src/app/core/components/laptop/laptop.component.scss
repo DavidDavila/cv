@@ -4,16 +4,20 @@ $trackpad-width: calc($laptop-width / 3.5);
 $gray: rgb(186 187 193);
 $screen: rgb(13 31 45);
 $border-radius: 5px;
+
+/* Resto de tu código CSS */
+
 @keyframes show {
   0% {
     --rotate-initial-x: -30deg;
-    --rotate-initial-y: 40deg;
+    --rotate-initial-y: -5deg;
     scale: 100%;
     transform: translate(0, 0);
   }
   1% {
-    scale: 100%;
-    transform: translate(0, 0);
+    --rotate-initial-x: -30deg;
+    --rotate-initial-y: 40deg;
+    animation-change: true;
   }
   20% {
     scale: 150%;
